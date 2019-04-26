@@ -1,7 +1,7 @@
 ## Some note on Keras and tensorflow
 
 ### Save/load model, plot error figure in keras
-See kuzushiji_mnist_cnn.ipynb
+See kuzushiji_mnist_cnn.ipynb, mnist_fashion.ipynb
 ### Keras compile setting
 model.comile(optimizer='', loss='', metrics='')
 
@@ -41,3 +41,6 @@ Dense data format : (sample, length)
     layers.Dense(64, kernel_initializer='orthogonal')
     layers.Dense(64, bias_regularizer=tf.keras.regularizers.l2(0.01))
     layers.Dense(64, bias_initializer=tf.keras.initializers.constant(2.0))
+
+### Create Layer and Model manually
+See mnist.ipynb

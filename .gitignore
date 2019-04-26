@@ -107,6 +107,7 @@ coverage.xml
 # Django stuff:
 
 *.log
+logs
 
 local_settings.py
 
