@@ -3,10 +3,13 @@
 ### Save/load model, plot error figure in keras
 See kuzushiji_mnist_cnn.ipynb, mnist_fashion.ipynb
 ### Keras compile setting
-model.comile(optimizer='', loss='', metrics='')
+model.compile(optimizer='', loss='', metrics=[''])
 
 #### optimizer
-Stochastic gradient descent optimizer ('sgd'), RMSProp optimizer ('rmsprop'), Adam family optimizer('adam', 'adagrad','adadelta', 'adam', 'adamax'), Nesterov Adam optimizer ('nadam')
+* Stochastic gradient descent optimizer ('sgd')
+* RMSProp optimizer ('rmsprop')
+* Adam family optimizer('adam', 'adagrad','adadelta', 'adam', 'adamax')
+* Nesterov Adam optimizer ('nadam')
 )
 #### loss
 " Common choices include mean square error ('mse'), categorical_crossentropy ('categorical_crossentropy' or 'sparse_categorical_crossentropy'), and binary crossentropy ('binary_crossentropy') "
@@ -14,10 +17,12 @@ Stochastic gradient descent optimizer ('sgd'), RMSProp optimizer ('rmsprop'), Ad
 * mean square error : 'mse' or tf.keras.losses.mean_squared_error
 * categorical_crossentropy: 'categorical_crossentropy' or tf.keras.losses.categorical_crossentropy
 * binary_crossentropy: 'binary_crossentropy' or tf.keras.losses.binary_crossentropy
-#### metrics
-Mean absolute error (['mae']) or accuracy (['accuracy'])
 
 If labels are encoded as interger, use 'sparse_categorical_crossentropy'
+
+#### metrics
+* Mean absolute error (['mae']) 
+* accuracy (['accuracy'])
 
 ### Convert interger to one-hot coding
 y = tensorflow.keras.utils.to_categorical(y, number_class)
@@ -39,7 +44,7 @@ Dense data format : (sample, length)
     layers.Dense(64, activation='relu', input_shape=(32,))
     layers.Dense(64, kernel_regularizer=tf.keras.regularizers.l1(0.01))
     layers.Dense(64, kernel_initializer='orthogonal')
-    layers.Dense(64, bias_regularizer=tf.keras.regularizers.l2(0.01))
+    layers.Dense(64, activation='relu', bias_regularizer=tf.keras.regularizers.l2(0.01))
     layers.Dense(64, bias_initializer=tf.keras.initializers.constant(2.0))
 
 ### Create Layer and Model manually
