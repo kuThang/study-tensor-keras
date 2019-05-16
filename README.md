@@ -1,3 +1,7 @@
+## Jupyter notebook
+### Run javascript
+See javascript_load_image.ipynb
+
 ## Some note on Keras and tensorflow
 
 ### Save/load model, plot error figure in keras
