@@ -53,3 +53,12 @@ Dense data format : (sample, length)
 
 ### Create Layer and Model manually
 See mnist.ipynb
+
+### Use ResNet50V2 or ResNeXt50 on kera 2.2.4
+
+    import keras_applications
+    keras_applications.resnext.ResNeXt50(
+        input_shape=(IMAGE_WIDTH, IMAGE_HEIGHT, 3), include_top = False, weights = 'imagenet', 
+        backend = keras.backend, layers = keras.layers, models = keras.models, utils = keras.utils)
+        
+        
